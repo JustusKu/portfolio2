@@ -221,6 +221,62 @@ height: 400px;
 }
 
 
+.services{
+    background: whitesmoke;
+    color: black;
+}
+.services h2{
+    margin-bottom: 5rem;
+    color: black;
+    font-size: 3rem;
+    justify-self: center;
+    margin-top: 3rem;
+}
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.service-box{
+    background-color: orangered;
+    color: black;
+    height: 250px;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.service-box:hover{
+    background: rgb(19, 70, 70);
+    color: white;
+    transform: scale(1.03);
+}
+.service-box .service-info{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-height: 200px;
+    justify-content: center;
+    align-items: baseline;
+    padding: 5em;
+}
+.service-info h4{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    margin-top: .5rem;
+    color: white;
+}
+.service-info p{
+    font-size: 1rem;
+    margin: auto;
+    max-height: 100;
+    font-weight: 400;
+}
+
+
+
+
 
 .contact-form h2{
     text-align: center;
@@ -272,17 +328,19 @@ height: 400px;
 }
 
 .footer .social a{
-    font-size: 24px;
+    font-size: 25px;
     color: white;
     border: 2px solid orangered;
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     display: inline-block;
     text-align: center;
     border-radius: 50%;
-    margin: 0 8px;
+    margin: 0 10px;
     box-shadow: inset 0 0 10px orangered, 0 0 10px orangered;
     transition: 0.3s ease;
+    padding: 5px;
+    
 }
 
 .footer .social a:hover{
@@ -322,55 +380,89 @@ text-align: center;
     color: white;
     
 }
-.services{
-    background-color: orangered;
-}
-.services h2{
-    margin-bottom: 5rem;
-    color: white;
-}
-.services-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-tracks: center;
-    gap: 2.5rem;
-
-}
-.services-box{
-background-color: orangered;
-color: black;
-height: 250px;
-cursor: pointer;
-border-radius: 3rem;
-transition: 0.3s ease;
-}
-.service-box:hover{
-background: white;
-color: orangered;
-transform: scale(1.03);
-}
-.service-box  .service-info{
-display: flex;
-flex-direction: column;
-text-align: left;
-max-height: 200px;
-justify-content: center;
-align-items: baseline;
-padding: 5em;
-}
-.service-info h4{
-    font-size: 2.5rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
-
-}
-.service-info p{
-    font-size: 1.6rem;
-    font-weight: 400;
-    max-height: 100;
-    margin: auto;
-}
- 
 
 
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .services-container{
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(2,1fr);
+        margin: 0 5rem;
+    }
+    header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .services{
+        padding-bottom: 7rem;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
 
+}
+@media(max-width:895px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3%;
+        background: whitesmoke;
+        backdrop-filter: blur(20px)
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        
+    }
+    .navbar .active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: black;
+    }
+    
+    
+    .home-content h3{
+        font-size: 2.6rem;
+    }
+    .home-content h1{
+        font-size: 8rem;
+        margin-top: 3rem;
+    }
+    .home-content p{
+        max-width: 600px;
+        margin: 0 aut0;
+    }
+    .home-img img{
+        width: 56vw;
+        margin-top: -2rem;
+    }
+    .about{
+        flex-direction: column-reverse;
+    }
+    .about-content{
+        margin: 0 2rem 4rem;
+    }
+    .about-img{
+        width: 52vw;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+    .services h2{
+        margin-bottom: 3rem;
+    }
+    .services-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
