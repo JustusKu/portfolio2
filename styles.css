@@ -57,7 +57,7 @@ span{
 }
 
 #menu-icon{
-    color: white;
+    color: orangered;
     font-size: 3.6rem;
     display: none;
 }
@@ -408,6 +408,7 @@ text-align: center;
 @media(max-width:895px){
     #menu-icon{
         display: block;
+        color: orangered;
     }
     .navbar{
         position: absolute;
@@ -420,7 +421,7 @@ text-align: center;
         border-bottom-left-radius: 2rem;
         border-left: 2px solid var(--main-color);
         border-bottom: 2px solid var(--main-color);
-        
+        display: none;
     }
     .navbar .active{
         display: block;
@@ -430,6 +431,10 @@ text-align: center;
         font-size: 2rem;
         margin: 3rem 0;
         color: black;
+    }
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
     }
     
     
